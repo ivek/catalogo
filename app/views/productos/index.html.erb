@@ -1,0 +1,31 @@
+<h1>Mis productos</h1>
+	
+<table border="1">
+<% @productos.each do |p| %>
+
+<tr>
+	<td>
+		<%= p.titulo %>
+	</td>
+	<td>
+		<%= p.descripcion %>
+	</td>
+	<td>
+		<%= p.status %>
+	</td>
+	<td>
+		<%= link_to "Mostrar", p %>
+	</td>
+	<td>
+		<%= link_to "Eliminar", p, :confirm=>'¿Estas seguro?', :method=>:delete %>
+	</td>
+	<td>
+		<%= link_to "Editar", edit_producto_path(p) %>
+	</td>
+</tr>
+
+
+
+<%end%>
+</table>
+<%= link_to "Nuevo", new_producto_path %>

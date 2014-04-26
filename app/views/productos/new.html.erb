@@ -1,0 +1,41 @@
+<h1>Nuevo</h1>
+<%= form_for :productos, :url=> {:action=>"create"} do |f|%>
+<p>
+<%= f.label "Folio" %>
+<%= f.text_field :folio %>
+</p>
+<p>
+<%= f.label "Titulo" %>
+<%= f.text_field :titulo %>
+</p>
+<p>
+<%= f.label "Autor" %>
+<%= f.text_field :autor %>
+</p>
+<p>
+<%= f.label "Descripcion" %>
+<%= f.text_field :descripcion%>
+</p>
+<p>
+<%= f.label "Genero" %>
+<%= f.text_field :genero %>
+</p>
+<p>
+<%= f.label "Editorial" %>
+<%= f.text_field :editorial %>
+</p>
+<p>
+<%= f.label "Status" %>
+<%= f.text_field :status %>
+</p>
+<p>
+<%= f.label "Usuario" %>
+<%= f.text_field :usuario %>
+</p>
+<p>
+<%= f.label "Ubicacion" %>
+<%= f.text_field :ubicacion %>
+</p>
+<%=f.submit "Guardar"%>
+<%end%> 
+
